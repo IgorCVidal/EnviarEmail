@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #ce1a23; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Central de Envios</h1>
+    <p >
+        {% for message in get_flashed_messages() %}
+        <div class="important">{{ message }}</div>
+        {% endfor %}
+    </p>
+{% endblock %}
